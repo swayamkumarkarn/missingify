@@ -1,0 +1,25 @@
+.navigation {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 1rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  align-items: center;
+}
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  justify-content: center;
+}
+.logo-img {
+  height: 3rem;
+}
+.left {
+  justify-self: baseline;
+}
+.right {
+  justify-self: end;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
