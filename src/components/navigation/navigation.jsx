@@ -16,11 +16,15 @@ const Navigation = () => {
         <span>Missingify</span>
       </div>
       <div className="right">
-        {user.isLogged? (user.userName
+        {user.isLogged? (<>
+          <Link to="/logout"><div className="button-logout">{user.userName}</div></Link>
+          <Link to="/logout"><div className="button-link">Logout</div></Link>
+
+        </>
           
         ):(<>
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Register</Link>
+            <Link to="/login"><div className="button-link">Login</div></Link>
+            <Link to="/signup"><div className="button-link">Register</div></Link>
           </>)
         }
       </div>
