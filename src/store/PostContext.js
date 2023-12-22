@@ -1,14 +1,27 @@
-import {createContext, useState } from "react";
 
-export const postContext = createContext(null)
+import { createContext, useState ,useEffect} from "react";
 
-function Post({children}){
-const [postDetails, setPostDetails] = useState('')
-    return (
-        <postContext.Provider value = {{postDetails, setPostDetails}}>
-            {children}
-        </postContext.Provider>
-    )
+
+
+
+export const postContext = createContext(null);
+
+function Post({ children }) {
+
+
+    const [storedData, setStoredData] = useState(null);
+  const [postDetails, setPostDetails] = useState("");
+  return (
+    <postContext.Provider value={{ postDetails, setPostDetails,storedData,setStoredData }}>
+      {children}
+    </postContext.Provider>
+  );
 }
+
+
+
+
+
+
 
 export default Post;

@@ -1,7 +1,8 @@
 import React from "react";
 import "./Card.css";
-const Card = () => {
-  return (
+const Card = (props) => {
+  const {itemName,category,itemType,city,time}=props;
+    return (
     <div className="card-main">
       <div className="news_box">
         {" "}
@@ -15,12 +16,12 @@ const Card = () => {
           />{" "}
         </div>
         <div className="news_detail">
-          <h2 className="detail-title">My pet addy dog</h2>
-          <span className="detail-category">Dog</span>
-          <span className="detail-type">Lost</span>
+          <h2 className="detail-title">{itemName}{console.log(props)}</h2>
+          <span className="detail-category">{category}</span>
+          <span className="detail-type">{itemType}</span>
           <div className="detail-loc-time">
-            <span className="detail-loc">Chennai</span>
-            <span className="detail-time">5 days ago</span>
+            <span className="detail-loc">{city}</span>
+            <span className="detail-time">{time}</span>
           </div>
         </div>
       </div>
